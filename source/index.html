@@ -2,26 +2,38 @@
 <html class="page" lang="ru">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>Туристическая компания Way|Путешествие по Европе</title>
 </head>
-<body class="page">
+<body class="page-body">
   <header class="page-header">
-    <nav class="page-header__nav main-nav">
-      <a class="main-nav__logo" aria-label="Вы находитесь на странице тура «Путешествие по Европе».">
-        <img src="logo" alt="Туристическая компания Way.">
-      </a>
-      <button class="main-nav__button" type="button" aria-label="Открыть/Закрыть меню"></button>
-      <ul class="main-nav__list site-nav">
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#places">О путешествии</a>
+    <nav class="page-header__nav main-nav main-nav--">
+      <div class="main-nav__wrapper">
+        <a class="main-nav__logo" aria-label="Вы находитесь на странице тура «Путешествие по Европе».">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="img/logo-desktop.svg">
+            <img src="img/logo-mobile.svg" sizes="(min-width: 1024px) 58px, 44px" alt="Туристическая компания Way.">
+          </picture>
+        </a>
+        <button class="main-nav__button" type="button" aria-label="Открыть/Закрыть меню"></button>
+      </div>
+      <ul class="main-nav__site-list">
+        <li class="main-nav__site-item">
+          <a class="main-nav__site-link" href="#places">О путешествии</a>
         </li>
-        <li class="site-nav__item">
-          <a class="site-nav__link" href="#price">Цены</a>
+        <li class="main-nav__site-item">
+          <a class="main-nav__site-link" href="#price">Цены</a>
         </li>
       </ul>
-      <ul class="main-nav__contacts contacts">
-        <li class="contacts__item">
-          <a class="contacts__link" href="tel:+749978468446">+7 (499) -784-684-46</a>
+      <ul class="main-nav__contact-list">
+        <li class="main-nav__contact-item">
+          <a class="main-nav__contact-link" href="tel:+749978468446">
+            <svg class="main-nav__contact-icon" width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.39635 6.62432C1.31179 5.42623 1.57753 4.24606 2.28114 3.29684C2.89115 2.43632 3.68536 1.96636 4.64264 1.69172C5.44893 1.4525 5.9774 1.74561 6.20992 2.64204C6.54211 3.98224 7.01622 5.3225 7.18836 6.73361C7.24271 7.35485 6.84108 8.23322 6.40623 8.6856C5.31608 9.75888 5.54257 10.5399 6.37 12.1643C6.62669 12.6881 7.03436 13.5934 7.82858 14.7919C8.65601 15.9992 9.09389 16.6472 10.1569 16.0975C11.3376 15.5035 12.1983 15.8855 13.0891 16.8444C13.6931 17.5369 14.3574 18.1318 14.9614 18.8243C15.8341 19.8542 15.7949 20.5641 15.1124 21.2915C13.8833 22.6309 11.854 23.0736 10.3441 22.1766C9.51064 21.6881 8.68018 21.0487 8.01884 20.303C5.10471 16.9825 3.00291 13.1212 1.73759 8.76321C1.53526 8.02654 1.44165 7.28104 1.39635 6.62432Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+            </svg>
+            <span class="main-nav__contact-number">+7 (499) -784-684-46</span>
+          </a>
         </li>
       </ul>
     </nav>
@@ -211,7 +223,7 @@
         </li>
       </ul>
     </section>
-    <section class="page-main__price price">
+    <section class="page-main__price price" id="price">
       <div class="price__info">
         <h2 class="price__heading">Цены</h2>
         <p class="price__decsription">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь
@@ -221,7 +233,7 @@
       </div>
       <ul class="price__list">
         <li class="price__item">
-          <article class="tariff tariff--active">
+          <article class="tariff">
             <h3 class="tariff__title">Комплексный</h3>
             <span class="tariff__price">$1999</span>
             <p class="tariff__description">Ознакомьтесь с перечнем того, что входит в данный пакет</p>
@@ -266,7 +278,7 @@
       </div>
     </section>
   </main>
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <div class="page-footer__nav footer-nav footer-nav--journey">
       <h3 class="footer-nav__title">Следующие путешествия</h3>
       <ul class="footer-nav__list">
@@ -310,7 +322,7 @@
       <img class="modal__image" src="" alt="">
     </div>
     <div class="modal__form feedback-form feedback-form--modal">
-      <h3 class="feedback-form__heading">Купить тур</h3>
+      <h2 class="feedback-form__heading">Купить тур</h2>
       <form class="feedback-form__form" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="mobile-input-modal">Укажите Ваш номер телефона</label>
         <input class="feedback-form__input" id="mobile-input-modal" type="tel" placeholder="+7 Введите 10 цифр номера" value="+7" required>

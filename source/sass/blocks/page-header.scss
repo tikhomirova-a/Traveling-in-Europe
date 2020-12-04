@@ -1,0 +1,11 @@
+.page-header {
+  @media (min-width: $desktop-width) {
+    padding-top: 35px;
+    padding-bottom: 30px;
+
+    .page-header__nav {
+      padding-left: 19.5%;
+      padding-right: 20.1%;
+    }
+  }
+}

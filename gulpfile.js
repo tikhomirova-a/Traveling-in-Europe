@@ -7,12 +7,12 @@ const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
-const del = require("del");
-const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
+// const del = require("del");
+// const imagemin = require("gulp-imagemin");
+// const webp = require("gulp-webp");
+// const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
-const terser = require("gulp-terser");
+// const terser = require("gulp-terser");
 
 
 // Clean
@@ -39,13 +39,13 @@ const terser = require("gulp-terser");
 
 // Minify HTML
 
-const html = () => {
-  return gulp.src("source/**/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest("source"));
-};
-
-exports.html = html;
+// const html = () => {
+//   return gulp.src("source/**/*.html")
+//     .pipe(htmlmin({ collapseWhitespace: true }))
+//     .pipe(gulp.dest("source"));
+// };
+//
+// exports.html = html;
 
 // Minify JS
 
@@ -114,14 +114,14 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series(styles));
-  gulp.watch("source/*.html").on("change", gulp.series(html, sync.reload));
+  gulp.watch("source/*.html").on("change", gulp.series(sync.reload));
 }
 
 exports.watcher = watcher;
 
 // Images
 
-// const images = () => {
+// const img = () => {
 //   return gulp.src("source/img/**/*.{jpg,png,svg}")
 //   .pipe(imagemin([
 //     imagemin.optipng({optimizationLevel: 3}),
@@ -131,7 +131,7 @@ exports.watcher = watcher;
 //   .pipe(gulp.dest("build/img"))
 // }
 //
-// exports.images = images;
+// exports.img = img;
 
 // WebP
 // const createWebp = () => {
@@ -162,7 +162,7 @@ exports.watcher = watcher;
 //   html,
 //   js,
 //   styles,
-//   images,
+//   img,
 //   createWebp,
 //   sprite
 // );

@@ -1,0 +1,6 @@
+.container {
+  @media (min-width: $desktop-width) {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
