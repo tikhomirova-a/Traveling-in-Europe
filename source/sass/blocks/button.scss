@@ -1,0 +1,50 @@
+.button {
+  @include reset-link;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 40px;
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $basic-white;
+
+  background-color: $basic-accent;
+
+  @media (max-width: $mobile-width-only) {
+    width: 288px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    width: 250px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $hover-accent;
+  }
+
+  &--icon {
+    justify-content: flex-start;
+    padding-right: 55px;
+    word-break: break-word;
+  }
+}
