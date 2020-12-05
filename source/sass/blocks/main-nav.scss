@@ -163,7 +163,7 @@
   &:first-child {
     @media (min-width: $desktop-width) {
       min-width: fit-content;
-      margin-right: 2%;
+      margin-right: 2%;//TODO
     }
   }
 }
