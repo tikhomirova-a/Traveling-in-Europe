@@ -12,3 +12,13 @@
     padding-bottom: 95px;
   }
 }
+
+.page-main__price {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 110px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    padding-top: 105px;
+  }
+}

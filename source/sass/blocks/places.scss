@@ -46,7 +46,11 @@
     margin-left: auto;
     margin-right: 5.2%;
 
-    @media (max-width: $tablet-width-only) {
+    @media (max-width: $mobile-width-only) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
       margin: 0;
     }
   }
@@ -55,17 +59,22 @@
     margin-right: auto;
     margin-left: 5.2%;
 
-    @media (max-width: $tablet-width-only) {
+    @media (max-width: $mobile-width-only) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
       margin: 0;
     }
   }
 
   @media (max-width: $mobile-width-only) {
     width: 100%;
+    margin: 0 auto;
   }
 
   @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
-    width: auto;
+    width: 50%;
 
     &:nth-child(2n+1):last-child {
       margin: 10px auto 0;
@@ -75,13 +84,49 @@
 
 .places__link {
   @include reset-link;
+
+  &:hover::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    content: "";
+
+    background-color: rgba(20, 21, 23, 0.6);
+  }
+
+  &:hover::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    width: fit-content;
+    padding: 8.57% 7.14%;
+    content: "Смотреть подробнее";
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: $basic-white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+
+    transform: translate(-50%, -50%);
+    border: 1px solid $basic-white;
+  }
 }
 
 .places__title {
   @include reset-text;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: calc(50% - 215px / 2);
+  z-index: 0;
 
   width: 215px;
   margin: 0 auto;
@@ -99,7 +144,7 @@
 .places__image {
   display: block;
 
-  @media (max-width: $mobile-width-only) {
+  @media (max-width: $tablet-width-only) {
     margin: 0 auto;
   }
 }
