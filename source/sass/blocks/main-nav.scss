@@ -45,6 +45,14 @@
   }
 }
 
+.main-nav__logo-image {
+  width: 58px;
+
+  @media (max-width: $tablet-width-only) {
+    width: 44px;
+  }
+}
+
 .main-nav__button {
   @include reset-button;
 
@@ -85,8 +93,6 @@
 
     background-color: $basic-white;
 
-    //transition: transform 2s; //TODO
-
     .main-nav--open & {
       position: absolute;
       top: 50%;
@@ -106,13 +112,13 @@
     box-shadow: 0 6px 0 $basic-white;
 
     .main-nav--open & {
-      transform: rotate(225deg);//TODO
+      transform: rotate(45deg);
     }
   }
 
   &::after {
     .main-nav--open & {
-      transform: rotate(-225deg);//TODO
+      transform: rotate(-45deg);
     }
   }
 }

@@ -1,0 +1,105 @@
+.places__description {
+  @include reset-text;
+
+  width: 33%;
+  padding-top: 30px;
+  padding-bottom: 55px;
+
+  @media (max-width: $mobile-width-only) {
+    width: auto;
+    padding: 0 0 20px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    width: auto;
+    max-width: 50%;
+    margin: 0 auto;
+    padding: 0 0 40px;
+  }
+}
+
+.places__list {
+  @include reset-list;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 100px;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width-only) {
+    row-gap: 30px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    justify-content: space-evenly;
+    padding: 0 4.12%;
+    row-gap: 20px;
+  }
+}
+
+.places__item {
+  position: relative;
+
+  width: 30.38%;
+
+  &:nth-child(5n+4) {
+    margin-left: auto;
+    margin-right: 5.2%;
+
+    @media (max-width: $tablet-width-only) {
+      margin: 0;
+    }
+  }
+
+  &:nth-child(5n+5) {
+    margin-right: auto;
+    margin-left: 5.2%;
+
+    @media (max-width: $tablet-width-only) {
+      margin: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    width: auto;
+
+    &:nth-child(2n+1):last-child {
+      margin: 10px auto 0;
+    }
+  }
+}
+
+.places__link {
+  @include reset-link;
+}
+
+.places__title {
+  @include reset-text;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 215px / 2);
+
+  width: 215px;
+  margin: 0 auto;
+  padding: 15px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: -0.415px;
+
+  background-color: $basic-white;
+}
+
+.places__image {
+  display: block;
+
+  @media (max-width: $mobile-width-only) {
+    margin: 0 auto;
+  }
+}

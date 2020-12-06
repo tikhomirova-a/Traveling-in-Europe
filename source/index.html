@@ -13,7 +13,7 @@
         <a class="main-nav__logo" aria-label="Вы находитесь на странице тура «Путешествие по Европе».">
           <picture>
             <source media="(min-width: 1024px)" srcset="img/logo-desktop.svg">
-            <img src="img/logo-mobile.svg" sizes="(min-width: 1024px) 58px, 44px" alt="Туристическая компания Way.">
+            <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="58" height="22" alt="Туристическая компания Way.">
           </picture>
         </a>
         <button class="main-nav__button" type="button" aria-label="Открыть/Закрыть меню"></button>
@@ -48,38 +48,88 @@
         </div>
       </div>
     </section>
-    <section class="page-main__places places" id="places">
-      <h2 class="places__heading">Места посещения</h2>
-      <p class="places__description">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
+    <section class="page-main__places places container" id="places">
+      <h2 class="places__heading heading heading--special-line">Места посещения</h2>
+      <p class="places__description text">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
       <ol class="places__list">
         <li class="places__item">
           <a class="places__link" href="#countries">
-            <p class="places__title">Греция</p>
-            <img class="places__image" src="image" alt="">
+            <h3 class="places__title">Греция</h3>
+            <picture>
+              <!--<source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/greece-card-mobile-1x.webp 1x, img/greece-card-mobile-2x.webp" 2x>
+              <source type="image/webp" srcset="img/greece-card-desktop-1x.webp 1x, img/greece-card-desktop-2x.webp" 2x>-->
+              <source media="(max-width: 1023px)"
+                        srcset="img/greece-card-mobile-1x.png 1x, img/greece-card-mobile-2x.png 2x">
+              <img class="places__image" src="img/greece-card-desktop-1x.png"
+                    srcset="img/greece-card-desktop-1x.png 350w, img/greece-card-desktop-2x.png 700w"
+                    sizes="(max-width: 767px) 288px, 350px"
+                    alt="Монастырь в горах Греции.">
+            </picture>
           </a>
         </li>
         <li class="places__item">
           <a class="places__link" href="#countries">
-            <p class="places__title">Албания</p>
-            <img class="places__image" src="image" alt="">
+            <h3 class="places__title">Албания</h3>
+            <picture>
+              <!--<source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/albania-card-mobile-1x.webp 1x, img/albania-card-mobile-2x.webp" 2x>
+              <source type="image/webp" srcset="img/albania-card-desktop-1x.webp 1x, img/albania-card-desktop-2x.webp" 2x>-->
+              <source media="(max-width: 1023px)"
+                        srcset="img/albania-card-mobile-1x.png 1x, img/albania-card-mobile-2x.png 2x">
+              <img class="places__image" src="img/albania-card-desktop-1x.png"
+                    srcset="img/albania-card-desktop-1x.png 350w, img/albania-card-desktop-2x.png 700w"
+                    sizes="(max-width: 767px) 288px, 350px"
+                    alt="Вид сверху на море и пляж Албании.">
+            </picture>
           </a>
         </li>
         <li class="places__item">
           <a class="places__link" href="#countries">
-            <p class="places__title">Македония</p>
-            <img class="places__image" src="image" alt="">
+            <h3 class="places__title">Македония</h3>
+            <picture>
+              <!--<source type="image/webp" media="(max-width: 1023px)"
+                       srcset="img/macedonia-card-mobile-1x.webp 1x, img/macedonia-card-mobile-2x.webp" 2x>
+              <source type="image/webp" srcset="img/macedonia-card-desktop-1x.webp 1x, img/macedonia-card-desktop-2x.webp" 2x>-->
+              <source media="(max-width: 1023px)"
+                        srcset="img/macedonia-card-mobile-1x.png 1x, img/macedonia-card-mobile-2x.png 2x">
+              <img class="places__image" src="img/macedonia-card-desktop-1x.png"
+                    srcset="img/macedonia-card-desktop-1x.png 350w, img/macedonia-card-desktop-2x.png 700w"
+                    sizes="(max-width: 767px) 288px, 350px"
+                    alt="Старинный каменный храм над морем.">
+            </picture>
           </a>
         </li>
         <li class="places__item">
           <a class="places__link" href="#countries">
-            <p class="places__title">Черногория</p>
-            <img class="places__image" src="image" alt="">
+            <h3 class="places__title">Черногория</h3>
+            <picture>
+              <!--<source type="image/webp" media="(max-width: 1023px)"
+                       srcset="img/montenegro-card-mobile-1x.webp 1x, img/montenegro-card-mobile-2x.webp" 2x>
+              <source type="image/webp" srcset="img/montenegro-card-desktop-1x.webp 1x, img/montenegro-card-desktop-2x.webp" 2x>-->
+              <source media="(max-width: 1023px)"
+                        srcset="img/montenegro-card-mobile-1x.png 1x, img/montenegro-card-mobile-2x.png 2x">
+              <img class="places__image" src="img/montenegro-card-desktop-1x.png"
+                    srcset="img/montenegro-card-desktop-1x.png 350w, img/montenegro-card-desktop-2x.png 700w"
+                    sizes="(max-width: 767px) 288px, 350px"
+                    alt="Вид сверху на каньон реки Тара.">
+            </picture>
           </a>
         </li>
         <li class="places__item">
           <a class="places__link" href="#countries">
-            <p class="places__title">Хорватия</p>
-            <img class="places__image" src="image" alt="">
+            <h3 class="places__title">Хорватия</h3>
+            <picture>
+              <!--<source type="image/webp" media="(max-width: 1023px)"
+                      srcset="img/croatia-card-mobile-1x.webp 1x, img/croatia-card-mobile-2x.webp" 2x>
+              <source type="image/webp" srcset="img/croatia-card-desktop-1x.webp 1x, img/croatia-card-desktop-2x.webp" 2x>-->
+              <source media="(max-width: 1023px)"
+                      srcset="img/croatia-card-mobile-1x.png 1x, img/croatia-card-mobile-2x.png 2x">
+              <img class="places__image" src="img/croatia-card-desktop-1x.png"
+                    srcset="img/croatia-card-desktop-1x.png 350w, img/croatia-card-desktop-2x.png 700w"
+                    sizes="(max-width: 767px) 288px, 350px"
+                    alt="Подземная пещера с прозрачной водой, сталактитами и сталагмитами.">
+            </picture>
           </a>
         </li>
       </ol>
@@ -106,8 +156,8 @@
         <li class="tabs__content-item">
           <article class="country">
             <div class="country__info">
-              <h2 class="country__heading">Греция</h2>
-              <p class="country__description">На севере Греции находится один из крупнейших комплексов монастырей,
+              <h2 class="country__heading heading">Греция</h2>
+              <p class="country__description text">На севере Греции находится один из крупнейших комплексов монастырей,
                 расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе».
                 Этот монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и
                 обломочной горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и
@@ -132,8 +182,8 @@
         <li class="tabs__content-item">
           <article class="country">
             <div class="country__info">
-              <h2 class="country__heading">Албания</h2>
-              <p class="country__description">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей
+              <h2 class="country__heading heading">Албания</h2>
+              <p class="country__description text">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей
                 водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно
                 белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни,
                 перетёртые до такого мелкого состояния. </p>
@@ -156,8 +206,8 @@
         <li class="tabs__content-item">
           <article class="country">
             <div class="country__info">
-              <h2 class="country__heading">Македония</h2>
-              <p class="country__description">В Македонии нашей целью будет посетить Палаошник, который расположился в
+              <h2 class="country__heading heading">Македония</h2>
+              <p class="country__description text">В Македонии нашей целью будет посетить Палаошник, который расположился в
                 удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы
                 заберемся на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100
                 метров.</p>
@@ -181,8 +231,8 @@
         <li class="tabs__content-item">
           <article class="country">
             <div class="country__info">
-              <h2 class="country__heading">Черногория</h2>
-              <p class="country__description">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
+              <h2 class="country__heading heading">Черногория</h2>
+              <p class="country__description text">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
                 некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина
                 каньона составляет 80 км. </p>
               <a class="country__link" href="#">Купить тур сейчас</a>
@@ -204,8 +254,8 @@
         <li class="tabs__content-item">
           <article class="country">
             <div class="country__info">
-              <h2 class="country__heading">Хорватия</h2>
-              <p class="country__description">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный
+              <h2 class="country__heading heading">Хорватия</h2>
+              <p class="country__description text">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный
                 мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными
                 нерукотворными скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
               <a class="country__link" href="#">Купить тур сейчас</a>
@@ -229,7 +279,7 @@
     </section>
     <section class="page-main__price price" id="price">
       <div class="price__info">
-        <h2 class="price__heading">Цены</h2>
+        <h2 class="price__heading heading">Цены</h2>
         <p class="price__decsription">Специально для Вас мы разработали 2 пакета цен с разными условиями, отталкиваясь
           от Ваших потребностей и возможностей. Выберите для себя лучший вариант отпуска и отдохните на все 100%!</p>
         <p class="price__contact">Свяжитесь с нами</p>

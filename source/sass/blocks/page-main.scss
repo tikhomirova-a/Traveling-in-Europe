@@ -1,1 +1,14 @@
-// TODO
+.page-main__places {
+  padding-top: 10.4%;
+  padding-bottom: 5%;
+
+  @media (max-width: $mobile-width-only) {
+    padding-top: 105px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    padding-top: 80px;
+    padding-bottom: 95px;
+  }
+}

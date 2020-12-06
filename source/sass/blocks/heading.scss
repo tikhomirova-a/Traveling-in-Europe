@@ -1,0 +1,55 @@
+.heading {
+  @include reset-text;
+
+  position: relative;
+
+  max-width: 50%;
+  padding-bottom: 20px;
+
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 164%;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 100%;
+
+    font-size: 24px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    max-width: 40%;
+    margin: 0 auto;
+
+    font-size: 30px;
+    line-height: 150%;
+    text-align: center;
+  }
+
+  &--special-line {
+    @media (min-width: $desktop-width) {
+      padding-bottom: 30px;
+
+      line-height: 145%;
+    }
+  }
+
+  &::after {
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+
+      content: "";
+      width: 175px;
+      height: 3px;
+
+      background-color: $basic-accent;
+    }
+  }
+
+  &--special-line::after {
+    width: 229px;
+  }
+}
