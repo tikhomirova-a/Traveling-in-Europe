@@ -47,4 +47,10 @@
     padding-right: 55px;
     word-break: break-word;
   }
+
+  &--price {
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      width: 288px;
+    }
+  }
 }
