@@ -7,6 +7,7 @@
 
   const startScript = () => {
     nav.classList.remove('main-nav--nojs');
+    nav.classList.remove('main-nav--open');
   }
 
   startScript();

@@ -1,3 +1,6 @@
 .idea
 .vscode
 node_modules/
+source/css/*.css
+source/css/*.map
+build/

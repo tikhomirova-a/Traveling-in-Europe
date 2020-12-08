@@ -3,6 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/Montserrat-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-SemiBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" href="fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
   <title>Туристическая компания Way|Путешествие по Европе</title>
 </head>
@@ -30,7 +34,7 @@
         <li class="main-nav__contact-item">
           <a class="main-nav__contact-link" href="tel:+749978468446">
             <svg class="main-nav__contact-icon" width="17" height="24" viewBox="0 0 17 24" fill="none">
-              <path d="M1.39635 6.62432C1.31179 5.42623 1.57753 4.24606 2.28114 3.29684C2.89115 2.43632 3.68536 1.96636 4.64264 1.69172C5.44893 1.4525 5.9774 1.74561 6.20992 2.64204C6.54211 3.98224 7.01622 5.3225 7.18836 6.73361C7.24271 7.35485 6.84108 8.23322 6.40623 8.6856C5.31608 9.75888 5.54257 10.5399 6.37 12.1643C6.62669 12.6881 7.03436 13.5934 7.82858 14.7919C8.65601 15.9992 9.09389 16.6472 10.1569 16.0975C11.3376 15.5035 12.1983 15.8855 13.0891 16.8444C13.6931 17.5369 14.3574 18.1318 14.9614 18.8243C15.8341 19.8542 15.7949 20.5641 15.1124 21.2915C13.8833 22.6309 11.854 23.0736 10.3441 22.1766C9.51064 21.6881 8.68018 21.0487 8.01884 20.303C5.10471 16.9825 3.00291 13.1212 1.73759 8.76321C1.53526 8.02654 1.44165 7.28104 1.39635 6.62432Z" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+              <use xlink:href="img/sprite.svg#phone"></use>
             </svg>
             <span class="main-nav__contact-number">+7 (499) -784-684-46</span>
           </a>
@@ -56,12 +60,12 @@
           <a class="places__link" href="#countries">
             <h3 class="places__title">Греция</h3>
             <picture>
-              <!--<source type="image/webp" media="(max-width: 1023px)"
-                        srcset="img/greece-card-mobile-1x.webp 1x, img/greece-card-mobile-2x.webp" 2x>
-              <source type="image/webp" srcset="img/greece-card-desktop-1x.webp 1x, img/greece-card-desktop-2x.webp" 2x>-->
+              <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/greece-card-mobile-1x.webp 1x, img/greece-card-mobile-2x.webp 2x">
+              <source type="image/webp" srcset="img/greece-card-desktop-1x.webp 1x, img/greece-card-desktop-2x.webp 2x">
               <source media="(max-width: 1023px)"
                         srcset="img/greece-card-mobile-1x.png 1x, img/greece-card-mobile-2x.png 2x">
-              <img class="places__image" src="img/greece-card-desktop-1x.png"
+              <img class="places__image" src="img/greece-card-desktop-1x.png" loading="lazy"
                     srcset="img/greece-card-desktop-1x.png 350w, img/greece-card-desktop-2x.png 700w"
                     sizes="(max-width: 767px) 288px, 350px"
                     alt="Монастырь в горах Греции.">
@@ -72,12 +76,12 @@
           <a class="places__link" href="#countries">
             <h3 class="places__title">Албания</h3>
             <picture>
-              <!--<source type="image/webp" media="(max-width: 1023px)"
-                        srcset="img/albania-card-mobile-1x.webp 1x, img/albania-card-mobile-2x.webp" 2x>
-              <source type="image/webp" srcset="img/albania-card-desktop-1x.webp 1x, img/albania-card-desktop-2x.webp" 2x>-->
+              <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/albania-card-mobile-1x.webp 1x, img/albania-card-mobile-2x.webp 2x">
+              <source type="image/webp" srcset="img/albania-card-desktop-1x.webp 1x, img/albania-card-desktop-2x.webp 2x">
               <source media="(max-width: 1023px)"
                         srcset="img/albania-card-mobile-1x.png 1x, img/albania-card-mobile-2x.png 2x">
-              <img class="places__image" src="img/albania-card-desktop-1x.png"
+              <img class="places__image" src="img/albania-card-desktop-1x.png" loading="lazy"
                     srcset="img/albania-card-desktop-1x.png 350w, img/albania-card-desktop-2x.png 700w"
                     sizes="(max-width: 767px) 288px, 350px"
                     alt="Вид сверху на море и пляж Албании.">
@@ -88,12 +92,12 @@
           <a class="places__link" href="#countries">
             <h3 class="places__title">Македония</h3>
             <picture>
-              <!--<source type="image/webp" media="(max-width: 1023px)"
-                       srcset="img/macedonia-card-mobile-1x.webp 1x, img/macedonia-card-mobile-2x.webp" 2x>
-              <source type="image/webp" srcset="img/macedonia-card-desktop-1x.webp 1x, img/macedonia-card-desktop-2x.webp" 2x>-->
+              <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/macedonia-card-mobile-1x.webp 1x, img/macedonia-card-mobile-2x.webp 2x">
+              <source type="image/webp" srcset="img/macedonia-card-desktop-1x.webp 1x, img/macedonia-card-desktop-2x.webp 2x">
               <source media="(max-width: 1023px)"
                         srcset="img/macedonia-card-mobile-1x.png 1x, img/macedonia-card-mobile-2x.png 2x">
-              <img class="places__image" src="img/macedonia-card-desktop-1x.png"
+              <img class="places__image" src="img/macedonia-card-desktop-1x.png" loading="lazy"
                     srcset="img/macedonia-card-desktop-1x.png 350w, img/macedonia-card-desktop-2x.png 700w"
                     sizes="(max-width: 767px) 288px, 350px"
                     alt="Старинный каменный храм над морем.">
@@ -104,12 +108,12 @@
           <a class="places__link" href="#countries">
             <h3 class="places__title">Черногория</h3>
             <picture>
-              <!--<source type="image/webp" media="(max-width: 1023px)"
-                       srcset="img/montenegro-card-mobile-1x.webp 1x, img/montenegro-card-mobile-2x.webp" 2x>
-              <source type="image/webp" srcset="img/montenegro-card-desktop-1x.webp 1x, img/montenegro-card-desktop-2x.webp" 2x>-->
+              <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/montenegro-card-mobile-1x.webp 1x, img/montenegro-card-mobile-2x.webp 2x">
+              <source type="image/webp" srcset="img/montenegro-card-desktop-1x.webp 1x, img/montenegro-card-desktop-2x.webp 2x">
               <source media="(max-width: 1023px)"
                         srcset="img/montenegro-card-mobile-1x.png 1x, img/montenegro-card-mobile-2x.png 2x">
-              <img class="places__image" src="img/montenegro-card-desktop-1x.png"
+              <img class="places__image" src="img/montenegro-card-desktop-1x.png" loading="lazy"
                     srcset="img/montenegro-card-desktop-1x.png 350w, img/montenegro-card-desktop-2x.png 700w"
                     sizes="(max-width: 767px) 288px, 350px"
                     alt="Вид сверху на каньон реки Тара.">
@@ -120,12 +124,12 @@
           <a class="places__link" href="#countries">
             <h3 class="places__title">Хорватия</h3>
             <picture>
-              <!--<source type="image/webp" media="(max-width: 1023px)"
-                      srcset="img/croatia-card-mobile-1x.webp 1x, img/croatia-card-mobile-2x.webp" 2x>
-              <source type="image/webp" srcset="img/croatia-card-desktop-1x.webp 1x, img/croatia-card-desktop-2x.webp" 2x>-->
+              <source type="image/webp" media="(max-width: 1023px)"
+                      srcset="img/croatia-card-mobile-1x.webp 1x, img/croatia-card-mobile-2x.webp 2x">
+              <source type="image/webp" srcset="img/croatia-card-desktop-1x.webp 1x, img/croatia-card-desktop-2x.webp 2x">
               <source media="(max-width: 1023px)"
                       srcset="img/croatia-card-mobile-1x.png 1x, img/croatia-card-mobile-2x.png 2x">
-              <img class="places__image" src="img/croatia-card-desktop-1x.png"
+              <img class="places__image" src="img/croatia-card-desktop-1x.png" loading="lazy"
                     srcset="img/croatia-card-desktop-1x.png 350w, img/croatia-card-desktop-2x.png 700w"
                     sizes="(max-width: 767px) 288px, 350px"
                     alt="Подземная пещера с прозрачной водой, сталактитами и сталагмитами.">
@@ -166,14 +170,14 @@
             </div>
             <div class="country__image">
               <picture>
-<!--                <source type="image/webp" media="(max-width: 1023px)"-->
-<!--                        srcset="img/greece-tablet-1x.webp 1x, img/greece-tablet-2x.webp 2x">-->
-<!--                <source type="image/webp" media="(max-width: 767px)"-->
-<!--                        srcset="img/greece-mobile-1x.webp 1x, img/greece-mobile-2x.webp 2x">-->
-<!--                <source type="image/webp" srcset="img/greece-desktop-1x.webp 1x, img/greece-desktop-2x.webp 2x">-->
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/greece-tablet-1x.webp 1x, img/greece-tablet-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/greece-mobile-1x.webp 1x, img/greece-mobile-2x.webp 2x">
+                <source type="image/webp" srcset="img/greece-desktop-1x.webp 1x, img/greece-desktop-2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/greece-mobile-1x.jpg 1x, img/greece-mobile-2x.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/greece-tablet-1x.jpg 1x, img/greece-tablet-2x.jpg 2x">
-                <img src="img/greece-desktop-1x.jpg"
+                <img src="img/greece-desktop-1x.jpg" loading="lazy"
                       srcset="img/greece-desktop-1x.jpg 430w, img/greece-desktop-2x.jpg 860w"
                       sizes="(max-width: 767px) 320px, (max-width: 1023px) 768px, 430px" alt="Монастырь в горах Греции.">
               </picture>
@@ -184,7 +188,7 @@
                 высоченные скалы. Но здесь потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как
                 будто стоишь на краю света! </p>
               <p class="review__author">
-                <img class="review__author-photo" src="img/vlada-1x.png" width="38" height="38"
+                <img class="review__author-photo" src="img/vlada-1x.png" width="38" height="38" loading="lazy"
                       srcset="img/vlada-1x.png 1x, img/vlada-2x.png 2x" alt="Аватар Влады Голициной.">
                 <span class="review__author-name">Влада Голицина</span>
               </p>
@@ -203,14 +207,14 @@
             </div>
             <div class="country__image">
               <picture>
-<!--                <source type="image/webp" media="(max-width: 1023px)"-->
-<!--                        srcset="img/albania-tablet-1x.webp 1x, img/albania-tablet-2x.webp 2x">-->
-<!--                <source type="image/webp" media="(max-width: 767px)"-->
-<!--                        srcset="img/albania-mobile-1x.webp 1x, img/albania-mobile-2x.webp 2x">-->
-<!--                <source type="image/webp" srcset="img/albania-desktop-1x.webp 1x, img/albania-desktop-2x.webp 2x">-->
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/albania-tablet-1x.webp 1x, img/albania-tablet-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/albania-mobile-1x.webp 1x, img/albania-mobile-2x.webp 2x">
+                <source type="image/webp" srcset="img/albania-desktop-1x.webp 1x, img/albania-desktop-2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/albania-mobile-1x.jpg 1x, img/albania-mobile-2x.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/albania-tablet-1x.jpg 1x, img/albania-tablet-2x.jpg 2x">
-                <img src="img/albania-desktop-1x.jpg"
+                <img src="img/albania-desktop-1x.jpg" loading="lazy"
                       srcset="img/albania-desktop-1x.jpg 430w, img/albania-desktop-2x.jpg 860w"
                       sizes="(max-width: 767px) 320px, (max-width: 1023px) 768px, 430px" alt="Вид сверху на море и пляж Албании.">
               </picture>
@@ -220,7 +224,7 @@
               <p class="review__content">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
                 собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
               <p class="review__author">
-                <img class="review__author-photo" src="img/marishka-1x.png" width="38" height="38"
+                <img class="review__author-photo" src="img/marishka-1x.png" width="38" height="38" loading="lazy"
                       srcset="img/marishka-1x.png 1x, img/marishka-2x.png 2x" alt="Аватар Маришки.">
                 <span class="review__author-name">Маришка</span>
               </p>
@@ -239,14 +243,14 @@
             </div>
             <div class="country__image">
               <picture>
-<!--                <source type="image/webp" media="(max-width: 1023px)"-->
-<!--                        srcset="img/macedonia-tablet-1x.webp 1x, img/macedonia-tablet-2x.webp 2x">-->
-<!--                <source type="image/webp" media="(max-width: 767px)"-->
-<!--                        srcset="img/macedonia-mobile-1x.webp 1x, img/macedonia-mobile-2x.webp 2x">-->
-<!--                <source type="image/webp" srcset="img/macedonia-desktop-1x.webp 1x, img/macedonia-desktop-2x.webp 2x">-->
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/macedonia-tablet-1x.webp 1x, img/macedonia-tablet-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/macedonia-mobile-1x.webp 1x, img/macedonia-mobile-2x.webp 2x">
+                <source type="image/webp" srcset="img/macedonia-desktop-1x.webp 1x, img/macedonia-desktop-2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/macedonia-mobile-1x.jpg 1x, img/macedonia-mobile-2x.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/macedonia-tablet-1x.jpg 1x, img/macedonia-tablet-2x.jpg 2x">
-                <img src="img/greece-desktop-1x.jpg"
+                <img src="img/greece-desktop-1x.jpg" loading="lazy"
                       srcset="img/macedonia-desktop-1x.jpg 430w, img/macedonia-desktop-2x.jpg 860w"
                       sizes="(max-width: 767px) 320px, (max-width: 1023px) 768px, 430px" alt="Старинный каменный храм над морем.">
               </picture>
@@ -257,7 +261,7 @@
                 гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила, особенно
                 после долгого пути в гору.</p>
               <p class="review__author">
-                <img class="review__author-photo" src="img/mikhail-1x.png" width="38" height="38"
+                <img class="review__author-photo" src="img/mikhail-1x.png" width="38" height="38" loading="lazy"
                       srcset="img/mikhail-1x.png 1x, img/mikhail-2x.png 2x" alt="Аватар Михаила Кульмина.">
                 <span class="review__author-name">Михаил Кузьмин</span>
               </p>
@@ -275,14 +279,14 @@
             </div>
             <div class="country__image">
               <picture>
-<!--                <source type="image/webp" media="(max-width: 1023px)"-->
-<!--                        srcset="img/montenegro-tablet-1x.webp 1x, img/montenegro-tablet-2x.webp 2x">-->
-<!--                <source type="image/webp" media="(max-width: 767px)"-->
-<!--                        srcset="img/montenegro-mobile-1x.webp 1x, img/montenegro-mobile-2x.webp 2x">-->
-<!--                <source type="image/webp" srcset="img/montenegro-desktop-1x.webp 1x, img/montenegro-desktop-2x.webp 2x">-->
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/montenegro-tablet-1x.webp 1x, img/montenegro-tablet-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/montenegro-mobile-1x.webp 1x, img/montenegro-mobile-2x.webp 2x">
+                <source type="image/webp" srcset="img/montenegro-desktop-1x.webp 1x, img/montenegro-desktop-2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/montenegro-mobile-1x.jpg 1x, img/montenegro-mobile-2x.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/montenegro-tablet-1x.jpg 1x, img/montenegro-tablet-2x.jpg 2x">
-                <img src="img/montenegro-desktop-1x.jpg"
+                <img src="img/montenegro-desktop-1x.jpg" loading="lazy"
                       srcset="img/montenegro-desktop-1x.jpg 430w, img/montenegro-desktop-2x.jpg 860w"
                       sizes="(max-width: 767px) 320px, (max-width: 1023px) 768px, 430px" alt="Вид сверху на каньон реки Тара.">
               </picture>
@@ -292,7 +296,7 @@
               <p class="review__content">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что в
                 фильмах :) Всем советую</p>
               <p class="review__author">
-                <img class="review__author-photo" src="img/anastasia-1x.png" width="38" height="38"
+                <img class="review__author-photo" src="img/anastasia-1x.png" width="38" height="38" loading="lazy"
                       srcset="img/anastasia-1x.png 1x, img/anastasia-2x.png 2x" alt="Аватар Анастасии Мей.">
                 <span class="review__author-name">Анастасия Мей</span>
               </p>
@@ -310,14 +314,14 @@
             </div>
             <div class="country__image">
               <picture>
-<!--                <source type="image/webp" media="(max-width: 1023px)"-->
-<!--                        srcset="img/croatia-tablet-1x.webp 1x, img/croatia-tablet-2x.webp 2x">-->
-<!--                <source type="image/webp" media="(max-width: 767px)"-->
-<!--                        srcset="img/croatia-mobile-1x.webp 1x, img/croatia-mobile-2x.webp 2x">-->
-<!--                <source type="image/webp" srcset="img/croatia-desktop-1x.webp 1x, img/croatia-desktop-2x.webp 2x">-->
+                <source type="image/webp" media="(max-width: 1023px)"
+                        srcset="img/croatia-tablet-1x.webp 1x, img/croatia-tablet-2x.webp 2x">
+                <source type="image/webp" media="(max-width: 767px)"
+                        srcset="img/croatia-mobile-1x.webp 1x, img/croatia-mobile-2x.webp 2x">
+                <source type="image/webp" srcset="img/croatia-desktop-1x.webp 1x, img/croatia-desktop-2x.webp 2x">
                 <source media="(max-width: 767px)" srcset="img/croatia-mobile-1x.jpg 1x, img/croatia-mobile-2x.jpg 2x">
                 <source media="(max-width: 1023px)" srcset="img/croatia-tablet-1x.jpg 1x, img/croatia-tablet-2x.jpg 2x">
-                <img src="img/croatia-desktop-1x.jpg"
+                <img src="img/croatia-desktop-1x.jpg" loading="lazy"
                       srcset="img/croatia-desktop-1x.jpg 430w, img/croatia-desktop-2x.jpg 860w"
                       sizes="(max-width: 767px) 320px, (max-width: 1023px) 768px, 430px"
                       alt="Подземная пещера с прозрачной водой, сталактитами и сталагмитами.">
@@ -329,7 +333,7 @@
                 то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни
                 с чем не спутать по итогу :)</p>
               <p class="review__author">
-                <img class="review__author-photo" src="img/vladimir-1x.png" width="38" height="38"
+                <img class="review__author-photo" src="img/vladimir-1x.png" width="38" height="38" loading="lazy"
                       srcset="img/vladimir-1x.png 1x, img/vladimir-2x.png 2x" alt="Аватар Владимира Мулицина.">
                 <span class="review__author-name">Владимир Мулицин</span>
               </p>
@@ -346,9 +350,7 @@
         <p class="price__contact">Свяжитесь с нами</p>
         <a class="price__tel" href="tel:+749978468446">
           <svg class="price__tel-icon" width="17" height="24" viewBox="0 0 17 24" fill="none">
-            <path
-              d="M1.39635 6.62432C1.31179 5.42623 1.57753 4.24606 2.28114 3.29684C2.89115 2.43632 3.68536 1.96636 4.64264 1.69172C5.44893 1.4525 5.9774 1.74561 6.20992 2.64204C6.54211 3.98224 7.01622 5.3225 7.18836 6.73361C7.24271 7.35485 6.84108 8.23322 6.40623 8.6856C5.31608 9.75888 5.54257 10.5399 6.37 12.1643C6.62669 12.6881 7.03436 13.5934 7.82858 14.7919C8.65601 15.9992 9.09389 16.6472 10.1569 16.0975C11.3376 15.5035 12.1983 15.8855 13.0891 16.8444C13.6931 17.5369 14.3574 18.1318 14.9614 18.8243C15.8341 19.8542 15.7949 20.5641 15.1124 21.2915C13.8833 22.6309 11.854 23.0736 10.3441 22.1766C9.51064 21.6881 8.68018 21.0487 8.01884 20.303C5.10471 16.9825 3.00291 13.1212 1.73759 8.76321C1.53526 8.02654 1.44165 7.28104 1.39635 6.62432Z"
-              stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/>
+            <use xlink:href="img/sprite.svg#phone"></use>
           </svg>
           <span class="price__tel-number">+7 (499) -784-684-46</span></a>
       </div>
@@ -468,9 +470,9 @@
   <section class="modal">
     <div class="modal__image-wrapper">
       <picture>
-<!--        <source type="image/webp" srcset="img/sea-storm-1x.webp 1x, img/sea-storm-2x.webp 2x">-->
+        <source type="image/webp" srcset="img/sea-storm-1x.webp 1x, img/sea-storm-2x.webp 2x">
         <img class="modal__image" src="img/sea-storm-1x.jpg" srcset="img/sea-storm-1x.jpg 1x, img/sea-storm-2x.jpg 2x"
-              width="338" height="444" alt="Штормовое море пасмурным днем и утесы вдалеке.">
+              loading="lazy" width="338" height="444" alt="Штормовое море пасмурным днем и утесы вдалеке.">
       </picture>
     </div>
     <div class="modal__form feedback-form feedback-form--modal">
@@ -494,7 +496,7 @@
     </div>
     <button class="modal__close" type="button" aria-label="Закрыть окно">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M1 23L23 1M23 23L1 1" stroke="#141517" stroke-opacity="0.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <use xlink:href="img/sprite.svg#close-icon"></use>
       </svg>
     </button>
   </section>

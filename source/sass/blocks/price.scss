@@ -72,7 +72,7 @@
 
   font-size: 20px;
   line-height: 160%;
-  color: $basic-black;
+  color: $basic-accent;
 
   @media (max-width: $tablet-width-only) {
     display: block;
@@ -100,20 +100,19 @@
   @media (max-width: $tablet-width-only) {
     display: none;
   }
-
-  & path {
-    stroke: $basic-accent;
-  }
 }
 
 .price__tel-number {
   padding-left: 10.3%;
+
+  color: $basic-black;
 
   @media (max-width: $tablet-width-only) {
     padding: 0;
 
     text-align: center;
     text-decoration: underline;
+    color: $basic-accent;
   }
 }
 
