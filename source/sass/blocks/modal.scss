@@ -6,10 +6,12 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    z-index: 1;
 
     display: flex;
     width: 71%;
+    max-width: 730px;
+    transform: translate(-50%, -50%);
 
     background-color: $basic-white;
 
@@ -21,6 +23,42 @@
       min-width: 320px;
 
       transform: none;
+    }
+  }
+
+  &--status::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100%;
+    content: "";
+
+    background-color: $basic-light;
+  }
+
+  &--status::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    width: 55%;
+    max-width: 400px;
+    content: "Форма успешно отправлена, спасибо! :)";
+    transform: translate(-50%, -50%);
+
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 170%;
+    text-align: center;
+    color: $special-grey;
+
+
+    @media (max-width: $mobile-width-only) {
+      width: 100%;
     }
   }
 }
@@ -53,4 +91,5 @@
   position: absolute;
   top: 4.5%;
   right: 2.74%;
+  z-index: 1;
 }

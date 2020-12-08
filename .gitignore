@@ -1,4 +1,3 @@
 .idea
 .vscode
 node_modules/
-source/sass/blocks/temporary.scss

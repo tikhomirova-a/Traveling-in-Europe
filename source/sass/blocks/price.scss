@@ -82,6 +82,18 @@
     text-align: center;
     color: $basic-accent;
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: 1px solid $basic-black;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .price__tel-icon {
