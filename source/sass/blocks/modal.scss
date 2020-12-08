@@ -1,0 +1,56 @@
+.modal {
+  display: none;
+
+
+  &--show {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    width: 71%;
+
+    background-color: $basic-white;
+
+    @media (max-width: $tablet-width-only) {
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      min-width: 320px;
+
+      transform: none;
+    }
+  }
+}
+
+.modal__image-wrapper {
+  min-width: fit-content;
+
+  @media (max-width: $tablet-width-only) {
+    display: none;
+  }
+}
+
+.modal__image {
+  display: block;
+  object-fit: cover;
+}
+
+.modal__form {
+  max-width: 80%;
+
+  @media (max-width: $tablet-width-only) {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.modal__close {
+  @include reset-button;
+
+  position: absolute;
+  top: 4.5%;
+  right: 2.74%;
+}

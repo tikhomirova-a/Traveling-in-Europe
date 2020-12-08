@@ -53,4 +53,12 @@
       width: 288px;
     }
   }
+
+  &--form {
+    border: none;
+
+    @media (min-width: $desktop-width) {
+      padding: 18px 40px 17px;
+    }
+  }
 }

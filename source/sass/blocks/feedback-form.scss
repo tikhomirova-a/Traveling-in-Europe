@@ -1,0 +1,249 @@
+.feedback-form {
+  width: 58%;
+  padding: 4.3% 4.3%;
+  margin-left: auto;
+
+  background-color: $basic-white;
+  box-shadow: 0 4px 30px rgba(41, 54, 66, 0.1);
+  border-radius: 5px;
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+    padding: 50px 5%;
+
+    background-color: $basic-light;
+    box-shadow: none;
+    border-radius: 0;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 7%;
+  }
+
+  &--modal {
+    width: calc(100% - 338px);
+    padding: 70px 8.25% 30px;
+    margin: 0;
+
+    background-color: $basic-light;
+    box-shadow: none;
+
+    @media (max-width: $tablet-width-only) {
+      width: 100%;
+      padding: 100px 4.68% 10px;
+
+      background-color: $basic-white;
+    }
+  }
+}
+
+.feedback-form__heading {
+  @include reset-text;
+
+  margin-bottom: 15px;
+
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 128%;
+  text-align: center;
+  color: $dark;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 20px;
+  }
+
+  .feedback-form--modal & {
+    margin-bottom: 50px;
+
+    line-height: 170%;
+    color: #48494d;
+  }
+}
+
+.feedback-form__description {
+  @include reset-text;
+
+  margin-bottom: 25px;
+
+  line-height: 150%;
+  text-align: center;
+  color: $dark;
+
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 20px;
+  }
+}
+
+.feedback-form__form {
+  display: grid;
+  grid-template-columns: 48.225% 48.225%;
+  column-gap: 3.55%;
+  row-gap: 25px;
+
+  @media (max-width: $mobile-width-only) {
+    display: block;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 0;
+    row-gap: 0;
+  }
+
+  .feedback-form--modal & {
+    display: block;
+  }
+}
+
+.feedback-form__fieldset {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  min-width: 242px;
+
+  border: none;
+
+  @media (max-width: $mobile-width-only) {
+    min-width: auto;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    min-width: 260px;
+    max-width: 50%;
+  }
+
+  &:first-of-type {
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      margin-right: 3.68%;
+    }
+  }
+
+  .feedback-form--modal & {
+    margin-bottom: 20px;
+
+    @media (max-width: $tablet-width-only) {
+      min-width: 288px;
+      max-width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+.feedback-form__input {
+  width: 100%;
+  padding: 15px 5.57%;
+
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+  opacity: 1;
+
+  border: 1px solid rgba(44, 46, 63, 0.3);
+
+  &:first-of-type {
+    padding-left: 18.58%;
+
+    @media (max-width: $mobile-width-only) {
+      padding-left: 17.7%;
+    }
+  }
+
+  &::placeholder {
+    font-size: 14px;
+    line-height: 17px;
+    color: $dark;
+    opacity: 1;
+
+    .feedback-form--modal & {
+      color: $special-grey;
+
+      border-color: $light-grey;
+    }
+  }
+
+  @media (max-width: $mobile-width-only) {
+    width: 100%;
+  }
+
+  &--error {
+    border-color: $basic-accent;
+  }
+
+  .feedback-form--modal & {
+    color: $special-grey;
+  }
+}
+
+.feedback-form__submit {
+  @media (min-width: $desktop-width) {
+    width: 31.5%;
+    margin: 0 auto;
+    grid-column: 1/-1;
+    grid-row: 2/3;
+  }
+
+  @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+    margin-top: 3.68%;
+  }
+
+  .feedback-form--modal & {
+    width: 65%;
+
+    @media (max-width: $tablet-width-only) {
+      width: 288px;
+    }
+  }
+}
+
+.feedback-form__required-symbol {
+  position: absolute;
+  top: 6px;
+  left: 5.57%;
+
+  font-size: 10px;
+  line-height: 21px;
+  color: $basic-accent;
+
+  @media (max-width: $mobile-width-only) {
+    left: 5.2%;
+  }
+}
+
+.feedback-form__hint {
+  position: absolute;
+  top: 15px;
+  left: 9.29%;
+
+  font-size: 14px;
+  line-height: 17px;
+  color: $dark;
+
+  @media (max-width: $mobile-width-only) {
+    left: 9%;
+  }
+}
+
+.feedback-form__error {
+  display: none;
+
+  .feedback-form__input--error + & {
+    position: absolute;
+    top: -15px;
+    left: 0;
+
+    display: inline-block;
+
+    font-size: 12px;
+    line-height: 15px;
+    color: $basic-accent;
+  }
+}
