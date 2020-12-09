@@ -225,11 +225,16 @@
 
   font-family: "Proxima Nova", "Arial", sans-serif;
   font-size: 10px;
+  font-weight: 700;
   line-height: 21px;
   color: $basic-accent;
 
   @media (max-width: $mobile-width-only) {
     left: 5.2%;
+  }
+
+  & sup {
+    font-size: 10px;
   }
 }
 
