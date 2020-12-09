@@ -29,6 +29,7 @@
 
   &--special-line {
     @media (min-width: $desktop-width) {
+      max-width: 360px;
       padding-bottom: 30px;
 
       line-height: 145%;

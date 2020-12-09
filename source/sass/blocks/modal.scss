@@ -15,7 +15,7 @@
 
     background-color: $basic-white;
 
-    @media (max-width: $tablet-width-only) {
+    @media (max-width: $mobile-width-only) {
       top: 0;
       left: 0;
 
@@ -23,6 +23,10 @@
       min-width: 320px;
 
       transform: none;
+    }
+
+    @media (min-width: $tablet-width) and (max-width: $tablet-width-only) {
+      top: 55%;
     }
   }
 
@@ -92,4 +96,8 @@
   top: 4.5%;
   right: 2.74%;
   z-index: 1;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }

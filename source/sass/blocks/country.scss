@@ -31,6 +31,8 @@
 .country__image {
   width: 47.75%;
 
+  background-color: #b5cde9;
+
   @media (max-width: $mobile-width-only) {
     position: absolute;
     width: calc(100% + 3.3% * 2);
