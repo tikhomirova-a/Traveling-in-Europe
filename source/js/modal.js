@@ -1,76 +1,71 @@
 'use strict';
 
 (function () {
-  const modal = document.querySelector('.modal');
-  const modalClose = modal.querySelector('.modal__close');
-  const inputTel = modal.querySelector('#mobile-input-modal');
-  const inputEmail = modal.querySelector('#email-input-modal');
+  const modal = window.main.body.querySelector(`.modal`);
+  const modalClose = modal.querySelector(`.modal__close`);
+  const form = modal.querySelector(`.feedback-form__form`);
+  const inputTel = form.querySelector(`#mobile-input-modal`);
+  const inputEmail = form.querySelector(`#email-input-modal`);
 
   const showModal = () => {
-    modal.classList.add('modal--show');
+    modal.classList.add(`modal--show`);
+    window.main.body.classList.add(`page-body--modal-open`);
     inputTel.focus();
-    modalClose.addEventListener('click', onModalCloseClick);
-    document.addEventListener('keydown', onModalEscape);
+    modalClose.addEventListener(`click`, onModalCloseClick);
+    document.addEventListener(`keydown`, onModalEscape);
+    inputTel.addEventListener(`input`, window.form.onInputTelInput.bind(null, inputTel));
 
     const onFormSubmit = (evt) => {
-      saveToLocalStorage(inputTel, 'tel', inputEmail, 'email');
-      showModalStatus();
-      evt.preventDefault();
+      if (!inputTel.validity.valid || !inputEmail.validity.valid) {
+        evt.preventDefault();
+      } else {
+        window.form.saveToLocalStorage(inputTel, `tel`, inputEmail, `email`);
+        window.form.upload(new FormData(form), form);
+        window.form.statusClose.addEventListener(`click`, onStatusCloseClick);
+
+        evt.preventDefault();
+      }
     };
 
-    const form = modal.querySelector('.feedback-form__form');
-    form.addEventListener('submit', onFormSubmit);
-  }
-
-  const showModalStatus = () => {
-    modal.classList.add('modal--status');
-  }
+    form.addEventListener(`submit`, onFormSubmit);
+  };
 
   const hideModal = () => {
-    resetForm();
-    modal.classList.remove('modal--show');
-    modal.classList.remove('modal--status');
-    modalClose.removeEventListener('click', onModalCloseClick);
-    document.removeEventListener('keydown', onModalEscape);
-  }
-
-  const saveToLocalStorage = (input1, key1, input2, key2) => {
-    localStorage.setItem(key1, input1.value);
-    localStorage.setItem(key2, input2.value);
-  }
-
-  const resetForm = () => {
-    document.querySelectorAll('input').forEach((input) => {
-      input.value = '';
-    })
-  }
+    window.form.resetForm(form);
+    modal.classList.remove(`modal--show`);
+    window.main.body.classList.remove(`page-body--modal-open`);
+    modalClose.removeEventListener(`click`, onModalCloseClick);
+    document.removeEventListener(`keydown`, onModalEscape);
+  };
 
   const onModalShowClick = (evt) => {
     evt.preventDefault();
     showModal();
-  }
+  };
 
-  const onModalCloseClick = () => {
+  const onModalCloseClick = (evt) => {
+    evt.preventDefault();
     hideModal();
-  }
+  };
 
   const onModalEscape = (evt) => {
-    if (evt.key === 'Escape') {
+    if (evt.key === `Escape`) {
       evt.preventDefault();
       hideModal();
     }
-  }
+  };
 
   const setEventListeners = (elements) => {
     elements.forEach((elem) => {
-      elem.addEventListener('click', onModalShowClick);
+      elem.addEventListener(`click`, onModalShowClick);
     })
-  }
+  };
 
   setEventListeners(window.main.buttons);
 
-  window.modal = {
-    resetForm,
-    saveToLocalStorage
+  const onStatusCloseClick = (evt) => {
+    evt.preventDefault();
+    window.form.hideFormStatus();
+    hideModal();
   }
 })();

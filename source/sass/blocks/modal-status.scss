@@ -37,6 +37,8 @@
 .modal-status__text {
   @include reset-text;
 
+  display: none;
+
   max-width: 400px;
   margin: 0 auto;
 
@@ -45,6 +47,14 @@
   line-height: 170%;
   text-align: center;
   color: #48494d;
+
+  .modal-status--success &--success {
+    display: block;
+  }
+
+  .modal-status--error &--error {
+    display: block;
+  }
 }
 
 .modal-status__close {

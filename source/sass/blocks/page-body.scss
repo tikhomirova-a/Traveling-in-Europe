@@ -8,4 +8,8 @@
   color: $basic-dark;
 
   background-color: $basic-white;
+
+  &--modal-open {
+    overflow: hidden;
+  }
 }
